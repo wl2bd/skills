@@ -1,0 +1,31 @@
+{
+  "name": "wl2bd",
+  "owner": {
+    "name": "Waël Bouabda"
+  },
+  "metadata": {
+    "description": "Agent Skills by Waël Bouabda. Design and product craft, packaged so an agent runs the process instead of improvising it."
+  },
+  "plugins": [
+    {
+      "name": "wl2bd",
+      "source": "./",
+      "description": "Agent Skills by Waël Bouabda. Currently: naming — turns naming a product, company, library or feature into a real process (brief, wide generation, screening, argued shortlist) and verifies domains against authoritative registries over RDAP and WHOIS.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Waël Bouabda"
+      },
+      "homepage": "https://github.com/wl2bd/skills",
+      "license": "MIT",
+      "category": "design",
+      "tags": [
+        "naming",
+        "branding",
+        "product",
+        "domains",
+        "trademark",
+        "design"
+      ]
+    }
+  ]
+}
