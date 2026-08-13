@@ -1,2 +1,6 @@
 __pycache__/
 *.pyc
+
+# Working document for the author, regenerated on demand. Its Uncertainties block
+# lists weaknesses that have not been chosen for publication.
+project-brief.html
