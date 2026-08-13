@@ -9,7 +9,7 @@ ones I use in my own work, cleaned up enough to hand over.
 
 | Skill | What it does |
 |---|---|
-| [**naming**](skills/naming) | Turns naming a product, company, library or feature into a real process — brief, wide generation, brutal screening, argued shortlist — then verifies domains against authoritative registries. |
+| [**naming-jig**](skills/naming-jig) | Turns naming a product, company, library or feature into a real process — brief, wide generation, brutal screening, argued shortlist — then verifies domains against authoritative registries. |
 
 ## Install
 
@@ -20,16 +20,16 @@ ones I use in my own work, cleaned up enough to hand over.
 /plugin install wl2bd@wl2bd
 ```
 
-Skills then answer to `wl2bd:naming`.
+Skills then answer to `wl2bd:naming-jig`.
 
 **As a plain skill** — copy the folder you want:
 
 ```bash
 git clone https://github.com/wl2bd/skills.git
-cp -r skills/skills/naming ~/.claude/skills/naming
+cp -r skills/skills/naming-jig ~/.claude/skills/naming-jig
 ```
 
-Installed this way it answers to `naming`, unprefixed. `~/.agents/skills/`
+Installed this way it answers to `naming-jig`, unprefixed. `~/.agents/skills/`
 works as a cross-runtime alias for Codex, Copilot CLI and Gemini CLI.
 
 Either way, there is nothing to build and nothing to install: the only script

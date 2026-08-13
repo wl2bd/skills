@@ -1,9 +1,9 @@
 ---
-name: naming
+name: naming-jig
 description: Use when the user wants to find, create, evaluate, rename, or check a name for a project, product, company, feature, app, library, package, or brand — including casual asks like "help me name this", "name ideas for X", "is X a good name?", and availability questions about domains or trademarks. Also use when naming is only one part of a bigger task: launching a product, starting a company, or publishing a tool or an open-source package.
 ---
 
-# Naming
+# Naming jig
 
 Naming looks like a creative free-for-all. It isn't. Professional naming is a process with a funnel shape: a precise brief, deliberately wide generation, brutal screening, and a short argued list, then verification against the real world (domains, trademarks, other languages). Skipping the funnel is why most first-pass names are either taken, generic, or embarrassing in another language.
 

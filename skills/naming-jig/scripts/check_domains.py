@@ -67,7 +67,7 @@ CONTROL_LABEL = "nic"
 WHOIS_IANA = "whois.iana.org"
 WHOIS_PORT = 43
 WHOIS_TIMEOUT = 15
-PROBE_LABEL = "zz-naming-skill-probe-9731"
+PROBE_LABEL = "zz-naming-jig-probe-9731"
 # How far apart the two similarity scores must be before a WHOIS answer is
 # called either way. Below this, the answer resembles both controls about
 # equally, which is not evidence of anything.
@@ -127,7 +127,7 @@ def fetch(url: str):
         url,
         headers={
             "Accept": "application/rdap+json",
-            "User-Agent": "naming-skill-domain-check/2.0",
+            "User-Agent": "naming-jig-domain-check/2.0",
         },
     )
     delay = 1.0

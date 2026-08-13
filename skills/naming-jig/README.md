@@ -1,4 +1,4 @@
-# naming
+# naming-jig
 
 An Agent Skill that turns naming from a five-minute guess into a process.
 
@@ -21,7 +21,7 @@ the plugin install. To take just this one:
 
 ```bash
 git clone https://github.com/wl2bd/skills.git
-cp -r skills/skills/naming ~/.claude/skills/naming
+cp -r skills/skills/naming-jig ~/.claude/skills/naming-jig
 ```
 
 For other runtimes, `~/.agents/skills/` works as a cross-runtime alias. No
