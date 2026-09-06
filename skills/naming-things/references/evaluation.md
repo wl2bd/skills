@@ -29,7 +29,7 @@ Score survivors 1-5 on six dimensions. Scoring's job is to rank the ambiguous mi
 | **Fit** | Does it match the brief's positioning and tone adjectives? |
 | **Sayability** | Effortless to pronounce, first try, in every target market? |
 | **Memorability** | Sticky after one exposure? (Sound frame, imagery, surprise all feed this.) |
-| **Stretch** | Does it survive a pivot, a product-line extension, a decade? (Names that encode today's feature, or today's technology, age worst.) |
+| **Stretch** | Does it survive a pivot, a product-line extension, a decade? (Names that encode today's feature, or today's technology, age worst.) A metaphor name also imposes an imagery, or forbids all of it: the sea, the summit, the animal please for a year, then tire, or read as unserious once the company wants to be taken seriously. Write that into "Watch out" for every metaphor candidate. |
 | **Ownability** | Position on the distinctiveness spectrum (see `name-types.md`) + search uniqueness: can it be found? A name that's also a common word pays a permanent SEO and findability tax (fine for Apple-scale budgets, expensive for everyone else). |
 
 Weight dimensions by the brief: a CLI tool weights sayability and search uniqueness; a luxury brand weights distinctiveness and imagery.
@@ -46,7 +46,7 @@ Weight dimensions by the brief: a CLI tool weights sayability and search uniquen
 
 The name precedes the logo and survives it: it circulates by word of mouth without the designer, while the logo only travels where the company puts it. Typography, colour and symbol house the name; they do not replace it. So before any drawing, ask three questions of each shortlist name, and write the answers into "Watch out" when they bite:
 
-- Does the word hold as a wordmark: length, rhythm of the letterforms, awkward capitals, a double letter that will look like a typo at small sizes?
+- Does the word hold as a wordmark: length, rhythm of the letterforms, awkward capitals, a double letter that will look like a typo at small sizes? Is every word of it settled: an article or a qualifier added after the fact ("The", "Labs", "Studio") moves the balance of a logotype and sends the identity back to the drawing board.
 - Does it open a formal territory of its own, or will it force a symbol to compensate for a soft word?
 - Do the sound register and the probable visual register contradict each other (a percussive name that the brief's tone will have set in a light, rounded face)?
 
