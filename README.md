@@ -1,6 +1,6 @@
 # skills
 
-Agent Skills by [Waël Bouabda](https://github.com/wl2bd).
+Agent Skills by [wl2bd](https://github.com/wl2bd).
 
 A skill is a process an agent runs instead of improvising one. These are the
 ones I use in my own work, cleaned up enough to hand over.
