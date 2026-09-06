@@ -10,8 +10,8 @@
     {
       "name": "wl2bd",
       "source": "./",
-      "description": "Agent Skills by wl2bd. Currently: naming-things: turns naming a product, company, library or feature into a real process (brief, wide generation, screening, argued shortlist, series grammars, domain hacks when the name is typed more than said) and verifies domains against authoritative registries over RDAP and WHOIS.",
-      "version": "1.1.0",
+      "description": "Agent Skills by wl2bd. Currently: naming-things, a process for naming a product, company, library or feature (brief, wide generation, screening, argued shortlist, domain checks at the registry); discreet-design, a ladder that makes an agent remove before it draws, with craft rules for what stays and an MVP mode that does less without looking unfinished.",
+      "version": "1.2.0",
       "author": {
         "name": "wl2bd"
       },
@@ -24,7 +24,9 @@
         "product",
         "domains",
         "trademark",
-        "design"
+        "design",
+        "interface",
+        "ui"
       ]
     }
   ]

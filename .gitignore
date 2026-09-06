@@ -1,5 +1,7 @@
 __pycache__/
 *.pyc
+docs/_shots/
+.claude/
 
 # Working document for the author, regenerated on demand. Its Uncertainties block
 # lists weaknesses that have not been chosen for publication.

@@ -9,7 +9,8 @@ ones I use in my own work, cleaned up enough to hand over.
 
 | Skill | What it does |
 |---|---|
-| [**naming-things**](skills/naming-things) | Turns naming a product, company, library or feature into a real process — brief, wide generation, brutal screening, argued shortlist — then verifies domains against authoritative registries. |
+| [**naming-things**](skills/naming-things) | Turns naming a product, company, library or feature into a real process: brief, wide generation, brutal screening, argued shortlist, then domain checks against authoritative registries. |
+| [**discreet-design**](skills/discreet-design) | Makes an agent remove before it draws. A ladder for what stays on a screen, a craft file for how it sits, and an MVP mode that does less without looking unfinished. |
 
 ## Install
 
@@ -20,20 +21,21 @@ ones I use in my own work, cleaned up enough to hand over.
 /plugin install wl2bd@wl2bd
 ```
 
-Skills then answer to `wl2bd:naming-things`.
+Skills then answer to `wl2bd:naming-things` and `wl2bd:discreet-design`.
 
 **As a plain skill** — copy the folder you want:
 
 ```bash
 git clone https://github.com/wl2bd/skills.git
 cp -r skills/skills/naming-things ~/.claude/skills/naming-things
+cp -r skills/skills/discreet-design ~/.claude/skills/discreet-design
 ```
 
-Installed this way it answers to `naming-things`, unprefixed. `~/.agents/skills/`
-works as a cross-runtime alias for Codex, Copilot CLI and Gemini CLI.
+Installed this way they answer unprefixed. `~/.agents/skills/` works as a
+cross-runtime alias for Codex, Copilot CLI and Gemini CLI.
 
-Either way, there is nothing to build and nothing to install: the only script
-in here is Python 3 standard library only.
+Either way, there is nothing to build. The only script in the repo is Python 3
+standard library only, in naming-things.
 
 ## Using them
 
@@ -43,6 +45,8 @@ You don't invoke a skill. You ask for the thing, and it triggers on its own:
 > de crate avant de publier.
 
 > We're stuck between Cleary, Clario and Klaro for our accounting app.
+
+> The settings page has grown three extra cards. Can you clean it up?
 
 ## License
 
