@@ -10,7 +10,7 @@
     {
       "name": "wl2bd",
       "source": "./",
-      "description": "Agent Skills by Waël Bouabda. Currently: naming-jig — turns naming a product, company, library or feature into a real process (brief, wide generation, screening, argued shortlist, series grammars, domain hacks when the name is typed more than said) and verifies domains against authoritative registries over RDAP and WHOIS.",
+      "description": "Agent Skills by Waël Bouabda. Currently: naming-things — turns naming a product, company, library or feature into a real process (brief, wide generation, screening, argued shortlist, series grammars, domain hacks when the name is typed more than said) and verifies domains against authoritative registries over RDAP and WHOIS.",
       "version": "1.1.0",
       "author": {
         "name": "Waël Bouabda"

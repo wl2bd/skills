@@ -1,9 +1,9 @@
 ---
-name: naming-jig
+name: naming-things
 description: Use when the user wants to find, create, evaluate, rename, or check a name for a project, product, company, feature, app, library, package, or brand — including casual asks like "help me name this", "name ideas for X", "is X a good name?", and availability questions about domains or trademarks. Also use when naming is only one part of a bigger task: launching a product, starting a company, or publishing a tool or an open-source package.
 ---
 
-# Naming jig
+# Naming things
 
 Naming looks like a creative free-for-all. It isn't. Professional naming is a process with a funnel shape: a precise brief, deliberately wide generation, brutal screening, and a short argued list, then verification against the real world (domains, trademarks, other languages). Skipping the funnel is why most first-pass names are either taken, generic, or embarrassing in another language.
 
@@ -31,6 +31,7 @@ The five items below are what you need to **know**: not a questionnaire. Extract
 Two conditional questions are worth one of the two allowed slots when the brief leaves them open:
 
 - Item 1 ambiguous (a tool that may become a company, a product not yet known to be sold): *"Will this name be said aloud more than it is typed?"* This decides whether domain hacks belong in the shortlist (`references/name-types.md` §14).
+- Item 1 is a tool, package, skill or feature: *"Brand or label?"* A tool name can be a brand (Vercel, Figma) or a label that says what it does (`frontend-design`, `naming-things`); the whole register of generation depends on the answer, so settle it before territories. A label follows the conventions of the environment it lives in (verb-plus-object, lowercase, hyphens) and accepts descriptive neighbours as the normal price.
 - Item 1 is a tool, package, skill or feature and the user has not said so: *"Is this the first of a series?"* If yes, the object of the process is a naming system, not a name: choose the series grammar (`references/generation.md` §9, read at this step, before territories) and the shortlist has to show the system.
 
 Write the brief back in 3-4 lines before generating. A wrong brief silently invalidates everything downstream.
