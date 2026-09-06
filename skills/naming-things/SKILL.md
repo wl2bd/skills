@@ -23,7 +23,7 @@ Pick the mode from what the user actually needs:
 The five items below are what you need to **know**: not a questionnaire. Extract them from the conversation and context first, default what you reasonably can, and ask **at most two questions**, only for what is both essential and missing. Remaining assumptions get surfaced in the write-back below, where correcting them is cheap.
 
 1. **What is being named**: company, product, feature, project, package? (The stakes and the legal exposure differ.)
-2. **Positioning in one line**: what it does, for whom, against what alternative.
+2. **Positioning in one line**: what it does, for whom, against what alternative. If nobody can write this line, say so and stop: the skill does not do positioning, and a shortlist built on a missing positioning is plausible and wrong.
 3. **Tone**: 3 adjectives the name should feel like, and 1-2 it must not.
 4. **Markets and languages**: where will this name be read and said aloud? This decides which languages get the negative-meaning check.
 5. **Constraints**: must-have TLD? Words to avoid? Competitor names to distance from? Sibling products it must sit next to? Will it need a trademark?

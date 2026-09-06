@@ -119,6 +119,14 @@ access. The script says so rather than pretending.
 
 ## What it does not do
 
+It does not do brand strategy or positioning. The process starts from a
+brief, and the brief assumes someone has already decided what this thing is,
+for whom, and against what. When that work has not been done, no shortlist
+fixes it: the names will be plausible and wrong. Do that work first, with
+whoever does it for you; the skill takes over from there. It exists because
+between a strategy nobody has budgeted and a name picked in an afternoon,
+most teams get the afternoon, and the afternoon deserves a method.
+
 It does not clear a trademark. It screens: it catches obvious conflicts early,
 so dead names exit before anyone falls in love with them. Every trademark
 result it produces carries that caveat verbatim. For a name that will carry a
