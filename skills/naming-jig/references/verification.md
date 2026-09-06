@@ -7,12 +7,12 @@ Verification comes **after** screening, on the shortlist only. Its output is an 
 Run `scripts/check_domains.py` on the shortlist (Python 3, stdlib only, network required — see the fallback table below when either is missing):
 
 ```bash
-python3 scripts/check_domains.py lumafold amberpost --tlds com,fr,io,ai,app
+python3 scripts/check_domains.py lumafold amberpost --tlds com,ai,io,app
 ```
 
 It resolves each TLD to its authoritative registry through the IANA bootstrap registry, then queries that registry directly — over RDAP where the TLD publishes it, over WHOIS otherwise. Every TLD is control-tested before any of its answers are trusted. Interpretation:
 
-- `REGISTERED`: taken. (It may still be parked and buyable; note it, don't chase it unprompted.)
+- `REGISTERED`: taken. (It may still be parked and buyable; note it, don't chase it unprompted.) The script cannot price a domain, but the report should not leave the cost implicit: for each name reported `REGISTERED` on a TLD the brief cares about, and for any TLD with premium pricing (`.ai`, `.io`, most category gTLDs, every "premium" second-level label flagged by a registry), give an order of magnitude in the snapshot table: standard registration (under 50 EUR/yr), premium tier (50 to 500 EUR/yr), aftermarket (a parked page with a price: quote it). Classify on the renewal price, not the first-year promotion (`.press` at 5 USD the first year and 64 USD after is premium). Check the registrar page by hand; never guess a price from memory. Cost is a filter like availability: it informs the choice, it never makes it.
 - `AVAILABLE?`: no registration found at the authoritative registry — an RDAP 404, or a WHOIS answer matching that registry's own "no such domain" reply. Treat as *likely available*; always confirm at a registrar before telling the user it's theirs, and before any public mention of the name.
 - `NO RDAP`: nothing could be checked for that TLD. **Not a verdict about the domain.** Report it as not checked and look it up at a registrar by hand. `.ch` and `.es` sit here permanently: their registries refuse port 43 to unregistered clients.
 - `UNKNOWN`: the registry was unreachable, rate-limited, or answered something unusable; check manually at a registrar.
@@ -36,10 +36,14 @@ Whatever the branch: never guess availability from memory, and report a name you
 **Domain strategy notes:**
 
 - The name and the domain are two decisions. A strong name with `getname.com`, `name.app`, or `namehq.com` beats a weak name with a clean `.com`. Prefix/suffix conventions (get-, use-, join-, try-, -hq, -app) are normal practice now.
-- **Pick the TLD set from the brief; don't inherit the script's default.** Brief item 4 (markets and languages) and item 5 (constraints, must-have TLD) decide which TLDs are worth a request. Pass them explicitly with `--tlds`. The default list exists for when there is genuinely no brief, and it spends requests on TLDs the project has no use for.
-- TLD by context: `.com` remains the credibility default for companies; `.fr`/`.eu` are natural for French/EU-anchored brands; `.ai`, `.io`, `.dev`, `.app` are accepted in tech (with `.io`/`.ai` price and renewal premiums). For a developer tool, the package name can matter more than the domain.
-- Several TLDs above publish no RDAP — `.io`, `.eu`, `.co`, `.de`, `.it`, `.ru` — and are checked over WHOIS instead; say so when you report them. `.ch` and `.es` cannot be checked at all and come back `NO RDAP`; recommend them where they fit, but never report one as available on this script's say-so.
+- **Pick the TLD set from the brief; don't inherit the script's default.** Brief item 4 (markets and languages) and item 5 (constraints, must-have TLD) decide which TLDs are worth a request. Pass them explicitly with `--tlds`. The default list (`com, ai, app, io, dev, tools`) exists for when there is genuinely no brief.
+- **The 2026 stack for a tech product**, in order: `.com` stays the credibility default for companies; `.ai` is the namespace of the cycle (over a million registrations, high renewal, and a price of roughly 70 to 140 USD a year); `.io` still signals SaaS and devtools, with slowing growth and WHOIS-only checks; `.app` and `.dev` are Google Registry TLDs with HTTPS enforced, right for products and developer tools and a wrong signal for a consumer brand; category TLDs (`.tools`, `.page`, `.menu`, `.studio`, `.design`) for web-native products where the domain is the name; `.co` only as a fallback for a US or global startup brief when `.com` is dead.
+- **Country TLDs are a market anchor, not a default.** `.fr`, `.eu`, `.de`, `.uk`, `.nl` measure a national market, not what a product brand wears; request them only when brief item 4 names that country. `.xyz`, `.online`, `.site` are volume TLDs with low renewal and a crypto tail: never a shortlist column unless the brief is crypto or disposable. `.shop` and `.store` are e-commerce only.
+- **When a shortlist name is a compound, test the second word as a TLD before testing it as a second-level label**: `early.tools` before `earlytools.com`. See `name-types.md` §14 for when a domain hack is allowed at all, and `generation.md` §8 for the construction rules. Country-code TLDs used as hacks (`.ly`, `.ng`, `.cv`, `.to`, `.is`) carry residency rules and registry risk (bit.ly moved to bitly.com after the Libyan registry seized domains it objected to); write that into "Watch out".
+- **A `.ai` domain never licenses "AI" in the name.** The TLD is a namespace decision; the morpheme in the word is the dated defect (see `anti-patterns.md`).
+- Several TLDs above publish no RDAP (`.io`, `.eu`, `.co`, `.de`, `.it`, `.ru`) and are checked over WHOIS instead; say so when you report them. `.ch` and `.es` cannot be checked at all and come back `NO RDAP`; recommend them where they fit, but never report one as available on this script's say-so.
 - Beware inference from a parked page: "for sale, $8,500" changes the calculus; flag the price question, don't negotiate assumptions.
+- **Series test.** When the brief says the name is the first of a series (`generation.md` §9), run the script on the shortlist name **and on 2-3 plausible future members**, invented for the purpose, even if those tools do not exist. Do this for the 2-3 families that survive scoring, not for every shortlist entry: the script warns against hundred-name lists for a reason. A system whose second name is already taken is a dead system; better to know before the first name is chosen. Report the future members in the snapshot table under a "series test" header, clearly marked as fictional.
 
 ## 2. Trademarks: screening, not clearance
 
@@ -71,6 +75,7 @@ Never output "trademark: available ✓". False legal confidence is the single wo
 
 - **Social handles**: check manually on the platforms the brief cares about (APIs for this are unreliable and against most ToS). An exact handle everywhere is rare and not required; consistent fallbacks (`namehq`, `getname`, `name_app`) are standard.
 - **Package registries**: for developer-facing projects, a name collision on npm / PyPI / crates.io can matter more than the domain. Check the exact package name; scoped packages (`@org/name`) are the npm fallback.
+- **Agent Skills and plugins**: the collision that matters is the folder namespace (`~/.claude/skills/<name>`, plugin marketplaces) and GitHub repository names; `api.github.com/search/repositories?q=<name>+in:name` answers where the HTML search page does not.
 - **App stores**: for consumer apps, search both stores for the exact name and close variants; store search collision with a big incumbent is a findability tax.
 
 ## 4. The snapshot table
@@ -78,12 +83,14 @@ Never output "trademark: available ✓". False legal confidence is the single wo
 Deliver verification as one table next to the shortlist:
 
 ```
-| Name | .com | .fr | .io* | TM screening (cl. 9/42) | npm |
-|------|------|-----|------|--------------------------|-----|
-| …    | REG  | AV? | AV?  | possible conflict: X (EUIPO, cl. 9) | free |
+| Name | .com | .ai | .io* | .app | Cost note | TM screening (cl. 9/42) | npm |
+|------|------|-----|------|------|-----------|--------------------------|-----|
+| …    | REG  | AV? | AV?  | AV?  | .ai premium tier | possible conflict: X (EUIPO, cl. 9) | free |
 
 * .io has no RDAP service: checked over WHOIS.
 ```
+
+Columns follow the brief's TLD set, not this example. Add a `series test` block under the table when the brief is a series, and drop the cost column only when every checked TLD is standard-priced and free.
 
 Mark any WHOIS-sourced column, as above — the script tells you which ones. A TLD reported `NO RDAP` keeps that word in its cell: leaving it blank or writing `AV?` would claim a check that never happened.
 

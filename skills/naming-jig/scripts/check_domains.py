@@ -37,7 +37,7 @@ two controls apart, the whole TLD stays NO RDAP. Results obtained this way
 are flagged in the output: the signal is WHOIS, not RDAP.
 
 Usage:
-  python3 check_domains.py lumafold amberpost --tlds com,fr,ai
+  python3 check_domains.py lumafold amberpost --tlds com,ai,app
   python3 check_domains.py "two words" --tlds com   (spaces are stripped)
   python3 check_domains.py écrin cœur --tlds fr     (accents are transliterated,
                                                      and the rewrite is printed)
@@ -58,7 +58,7 @@ import urllib.error
 import urllib.request
 
 IANA_BOOTSTRAP = "https://data.iana.org/rdap/dns.json"
-DEFAULT_TLDS = ["com", "fr", "io", "ai", "app", "dev"]
+DEFAULT_TLDS = ["com", "ai", "app", "io", "dev", "tools"]
 DELAY_SECONDS = 0.6
 TIMEOUT_SECONDS = 15
 RETRIES = 2
@@ -500,6 +500,8 @@ def main() -> int:
 
     print()
     if "AVAILABLE?" in seen:
+        print("REGISTERED = taken at the registry. It may still be parked and for")
+        print("             sale; the price, not the status, decides if it matters.")
         print("AVAILABLE? = no registration found at the authoritative registry.")
         print("             Confirm at a registrar before committing to the name")
         print("             or mentioning it publicly.")

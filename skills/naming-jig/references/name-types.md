@@ -58,6 +58,19 @@ Names the experience of use rather than the product. Energetic, verb-adjacent (g
 *IBM, BMW, HSBC*
 Meaningless until enormous ad spend makes it mean something. Almost never right for a new brand. Legitimate only when inherited (a long legal name that already exists): and even then, consider naming the brand and letting the acronym die.
 
+## 14. Domain-native (domain hack)
+*early.tools, obsidian.md, bun.sh, notion.so, bit.ly*
+The TLD is not an address, it is the last syllable of the name. The name is the full domain, read as one phrase: `early.tools` (discover pre-launch startups), `founders.menu`, `remix.run`. Nobody says "early"; they say "early dot tools". What it buys: a two-word name with a free domain in a landscape where every one-word .com is gone; the category is carried by the TLD, so the left part is free to be evocative; the URL is the wordmark. Legal strength: the left part alone is usually descriptive or generic and hard to protect; the combination is protectable as a mark but only as written with the dot, which limits stretch. Treat the TLD as part of the trademark search string. Construction technique in `generation.md` §8; real cases in `corpus.md` §14.
+
+**When to propose it, and how much.** The criterion is not company versus tool; it is **said versus typed**. A name that will live mostly in an address bar, a README, a package manager or a tweet can be a domain hack: the dot costs nothing where the name is typed. A name that will be said on the phone, in a pitch, on a podcast or on a business card pays the dot as a spelling tax every time. Brief items 1 and 5 already decide, without an extra question:
+
+| Brief item 1 | Domain-native in the shortlist |
+|---|---|
+| tool, side project, package, directory, web page, internal tool | a territory in its own right; 2 to 3 of the 6-10 names |
+| company, consumer product, anything with an app store listing or packaging | 1 at most, placed at the risky end of the shortlist, risk written in "Watch out" |
+
+When item 1 is ambiguous (a tool that may become a company, a product not yet known to be sold), it is worth one of the two allowed brief questions: *"Will this name be said aloud more than it is typed?"* The user often does not know whether it is a company; they know how the name will travel. Country-code TLDs (.ng, .ly, .cv, .to, .is) carry residency rules, registry instability and geopolitical risk; flag them in "Watch out". When the name's syntax forbids a dot (a package, a CLI command, a skill folder), the quota does not apply; the nearest equivalent is a suffix that is also a live TLD, so the family could later sit on `name.<tld>`.
+
 ---
 
-**Using the taxonomy:** during generation, tag each candidate with its type and keep rough quotas (SKILL.md step 3). During shortlisting, deliberately mix types so the decision space spans the spectrum: one descriptive-leaning safe option, several suggestive/metaphor/arbitrary, at least one coined. During evaluation, use the spectrum position as the "ownability" input.
+**Using the taxonomy:** during generation, tag each candidate with its type and keep rough quotas (SKILL.md step 3). During shortlisting, deliberately mix types so the decision space spans the spectrum: one descriptive-leaning safe option, several suggestive/metaphor/arbitrary, at least one coined, and domain-native dosed by the said-versus-typed rule above. During evaluation, use the spectrum position as the "ownability" input. `corpus.md` holds real names filed under each type, with what each one buys and what it costs.

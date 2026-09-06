@@ -11,8 +11,14 @@ against the real world.
 
 One principle governs it: **a name is an empty vessel.** Apple said nothing
 about computers. The brand charges the name with meaning over time. So the
-search is not for a name that explains the product — it's for one the product
+search is not for a name that explains the product: it's for one the product
 can inhabit.
+
+A second one explains why a designer wrote it: **the name comes before the
+logo and outlives it.** A logo only travels where the company puts it; the
+name travels by word of mouth, without the designer. Typography, colour and
+symbol house the name, they don't replace it. It's the first brand asset, and
+the one a rebrand doesn't touch.
 
 ## Install
 
@@ -41,14 +47,19 @@ own:
 
 It adapts: a full process for a company or product, a compressed one for a repo
 or an internal tool, and a screening-plus-verification pass when you already
-have a shortlist.
+have a shortlist. It knows the difference between a name that will be said
+(a company, a pitch, a podcast) and one that will be typed (a package, a
+directory, a side project): the second may be a domain hack like
+`early.tools`, the first pays the dot every time. And when the thing you're
+naming is the first of a series, it designs the grammar of the family and
+checks that the second and third names are still free.
 
 ## The domain checker
 
 `scripts/check_domains.py` runs standalone if you want it on its own:
 
 ```bash
-python3 scripts/check_domains.py lumafold amberpost verdance --tlds com,fr,io
+python3 scripts/check_domains.py lumafold amberpost verdance --tlds com,ai,io
 ```
 
 ```
@@ -56,7 +67,7 @@ No RDAP service for: .io. Checked over WHOIS instead, against a
 known-taken and a known-free control on each registry. Say so when
 you report these: the signal is WHOIS, not RDAP.
 
-name       .com          .fr           .io
+name       .com          .ai           .io
 -----------------------------------------------------
 lumafold   REGISTERED    AVAILABLE?    AVAILABLE?
 amberpost  REGISTERED    AVAILABLE?    AVAILABLE?
@@ -90,6 +101,11 @@ So instead this script:
 - treats a rate-limit notice, an empty body or a refusal as a **non-answer**,
   because a busy registry must not read as a list of free domains.
 
+Without `--tlds` it checks `.com`, `.ai`, `.app`, `.io`, `.dev` and `.tools`:
+the extensions a tech product actually wears in 2026. Country extensions
+(`.fr`, `.de`, `.uk`) are a market anchor, not a default; ask for them when
+the brief names the country.
+
 `AVAILABLE?` keeps its question mark on purpose. It means no registration was
 found — not that the domain is yours. Confirm at a registrar before committing
 to a name, and before mentioning it publicly.
@@ -118,9 +134,10 @@ stays yours.
 |---|---|
 | `SKILL.md` | The seven-step process and when to compress it |
 | `references/anti-patterns.md` | The defaults you'll otherwise reach for |
-| `references/name-types.md` | Taxonomy, examples, legal strength per type |
-| `references/generation.md` | Construction techniques, sound symbolism, morphology |
-| `references/evaluation.md` | Kill list, tests, scoring, real-world failures |
+| `references/name-types.md` | Taxonomy, examples, legal strength per type, said versus typed |
+| `references/generation.md` | Construction techniques, sound symbolism, domain hacks, series grammars |
+| `references/evaluation.md` | Kill list, tests, scoring, the visual room pass, real-world failures |
+| `references/corpus.md` | Over 200 real names by type, 1870 to 2026, what each one buys and costs |
 | `references/verification.md` | Domains, trademarks, handles, wording of disclaimers |
 | `scripts/check_domains.py` | Domain availability, RDAP + WHOIS |
 
