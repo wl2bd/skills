@@ -10,7 +10,7 @@
     {
       "name": "wl2bd",
       "source": "./",
-      "description": "Agent Skills by wl2bd. Currently: naming-things, a process for naming a product, company, library or feature (brief, wide generation, screening, argued shortlist, domain checks at the registry); discreet-design, which keeps a screen quiet by cutting extra cards, icons and colour before drawing, and treats a first version as smaller, not sloppier.",
+      "description": "Agent Skills by wl2bd. Currently: naming-things, a process for naming a product, company, library or feature (brief, wide generation, screening, argued shortlist, domain checks at the registry); discreet-design, as little visible design as possible and a lot of care in what remains.",
       "version": "1.2.0",
       "author": {
         "name": "wl2bd"

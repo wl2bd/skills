@@ -1,17 +1,16 @@
 # discreet-design
 
-An Agent Skill that keeps a screen quiet: it cuts extra cards, icons and
-colour before drawing anything.
+An Agent Skill for as little visible design as possible, and a lot of care
+in what remains.
 
 Most interfaces fail by addition: one more card, one more icon, one more
-color, each defensible alone, unreadable together. This skill runs a ladder
-before anything is drawn. Does it need to exist. Does a view, a component or
-a platform pattern already cover it. Can type, space or fewer words do the
-job. Only then draw the minimum that reads well.
+colour, each defensible alone, unreadable together. This skill asks, before
+drawing, whether the thing needs to exist at all, and whether type, space or
+fewer words already do the job. Then it draws the minimum that still reads.
 
-What stays has to sit well, because a bare screen has nowhere to hide a
-sloppy gap. Craft (type, space, the one oversized pause, motion) applies to
-everything that survives. An MVP does less. It is not made worse.
+A bare screen has nowhere to hide a sloppy gap, so the care goes into what
+stays: type, space, the one pause, motion. A first version does less. It is
+not made worse.
 
 ## Install
 

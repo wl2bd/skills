@@ -10,7 +10,7 @@ ones I use in my own work, cleaned up enough to hand over.
 | Skill | What it does |
 |---|---|
 | [**naming-things**](skills/naming-things) | Turns naming a product, company, library or feature into a real process: brief, wide generation, brutal screening, argued shortlist, then domain checks against authoritative registries. |
-| [**discreet-design**](skills/discreet-design) | Keeps a screen quiet: cuts extra cards, icons and colour before drawing anything, and treats a first version as smaller, not sloppier. |
+| [**discreet-design**](skills/discreet-design) | As little visible design as possible, and a lot of care in what remains, so a quiet screen still does the job and doesn't look unfinished. |
 
 ## Install
 
