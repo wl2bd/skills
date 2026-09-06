@@ -1,6 +1,7 @@
 # discreet-design
 
-An Agent Skill that makes an agent remove before it draws.
+An Agent Skill that keeps a screen quiet: it cuts extra cards, icons and
+colour before drawing anything.
 
 Most interfaces fail by addition: one more card, one more icon, one more
 color, each defensible alone, unreadable together. This skill runs a ladder

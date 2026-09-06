@@ -10,7 +10,7 @@ ones I use in my own work, cleaned up enough to hand over.
 | Skill | What it does |
 |---|---|
 | [**naming-things**](skills/naming-things) | Turns naming a product, company, library or feature into a real process: brief, wide generation, brutal screening, argued shortlist, then domain checks against authoritative registries. |
-| [**discreet-design**](skills/discreet-design) | Makes an agent remove before it draws. A ladder for what stays on a screen, a craft file for how it sits, and an MVP mode that does less without looking unfinished. |
+| [**discreet-design**](skills/discreet-design) | Keeps a screen quiet: cuts extra cards, icons and colour before drawing anything, and treats a first version as smaller, not sloppier. |
 
 ## Install
 
