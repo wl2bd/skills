@@ -10,7 +10,7 @@ ones I use in my own work, cleaned up enough to hand over.
 | Skill | What it does |
 |---|---|
 | [**naming-things**](skills/naming-things) | Turns naming a product, company, library or feature into a real process: brief, wide generation, brutal screening, argued shortlist, then domain checks against authoritative registries. |
-| [**discreet-design**](skills/discreet-design) | As little visible design as possible, and a lot of care in what remains, so a quiet screen still does the job and doesn't look unfinished. |
+| [**discreet-design**](skills/discreet-design) | As little visible design as possible, and a lot of care in what remains. Explicit only (`/discreet-design`) — does not trigger on ordinary UI work. |
 
 ## Install
 
@@ -39,14 +39,14 @@ standard library only, in naming-things.
 
 ## Using them
 
-You don't invoke a skill. You ask for the thing, and it triggers on its own:
+`naming-things` triggers on its own when you ask for a name:
 
 > Je lance une lib open source pour parser des fichiers ICS. Il me faut un nom
 > de crate avant de publier.
 
 > We're stuck between Cleary, Clario and Klaro for our accounting app.
 
-> The settings page has grown three extra cards. Can you clean it up?
+`discreet-design` does not. Call `/discreet-design` when you want it.
 
 ## License
 

@@ -27,19 +27,17 @@ to build: there is no script.
 
 ## Use
 
-You don't invoke it. Ask for a screen, say it's too busy, or that this is an
-MVP:
+Explicit only. It does not trigger on ordinary UI work. Call it by name:
 
-> The settings page has grown three extra cards. Can you clean it up?
+```
+/discreet-design
+/discreet-design the settings page has grown three extra cards
+```
 
-> First version of the export flow, just enough to ship.
-
-> The dashboard is shouting. Less.
-
-It works in three intensities if you ask: lite names the leaner version and
-lets you pick, full is the default, ultra challenges whether the screen should
-exist. MVP is a separate axis: how honest the scope looks, never how low the
-craft goes.
+Or say you want the discreet-design skill. Intensities if you ask: lite names
+the leaner version and lets you pick, full is the default, ultra challenges
+whether the screen should exist. MVP is a separate axis: how honest the scope
+looks, never how low the craft goes.
 
 A cut that skips a real corner is marked in the code with a `discreet:`
 comment, so it can come back when the condition is met.

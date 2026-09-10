@@ -1,6 +1,7 @@
 ---
 name: discreet-design
-description: Use on any interface task, building or editing screens, pages, components, layouts, forms, emails, choosing colors or type, spacing, or writing UI copy, and whenever the user says "discreet", "squint", "too busy", "cluttered", "simplify", "clean this up", "less", "minimal", or says a design looks AI-generated, over-decorated or noisy. Also for first versions that must ship publicly ("MVP", "v0", "just enough to ship"). Not for backend logic or prose outside the UI.
+description: The quietest screen that does the job — delete before drawing, craft on what stays. Only runs when explicitly invoked (`/discreet-design` or the user names this skill). It does not trigger on ordinary UI work.
+disable-model-invocation: true
 ---
 
 # Discreet design
