@@ -1,6 +1,6 @@
 ---
 name: discreet-design
-description: The quietest screen that does the job — delete before drawing, craft on what stays. Only runs when explicitly invoked (`/discreet-design` or the user names this skill). It does not trigger on ordinary UI work.
+description: Cuts an interface down to what it needs, then holds what stays to strict craft rules (type, spacing, alignment, colour, motion), with an MVP mode for first versions that go public. Runs only when called by name (`/discreet-design` or the user names this skill); it does not trigger on ordinary UI work.
 disable-model-invocation: true
 ---
 

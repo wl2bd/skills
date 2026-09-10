@@ -12,7 +12,7 @@ everything that survives. What shrinks is the surface, and the surface says so.
 
 Two different failures, often confused:
 
-| It looks vibe-coded | It looks finished |
+| It looks thrown together | It looks finished |
 |---|---|
 | A craft failure | A scope failure |
 | Sloppy gaps, default styles, no states, no rhythm | Marketing shell, dead controls, fake data |

@@ -10,7 +10,7 @@ ones I use in my own work, cleaned up enough to hand over.
 | Skill | What it does |
 |---|---|
 | [**naming-things**](skills/naming-things) | Turns naming a product, company, library or feature into a real process: brief, wide generation, brutal screening, argued shortlist, then domain checks against authoritative registries. |
-| [**discreet-design**](skills/discreet-design) | As little visible design as possible, and a lot of care in what remains. Explicit only (`/discreet-design`) — does not trigger on ordinary UI work. |
+| [**discreet-design**](skills/discreet-design) | Cuts an interface down to what it needs, then holds what stays to strict craft rules. Runs only when called by name (`/discreet-design`). |
 
 ## Install
 
