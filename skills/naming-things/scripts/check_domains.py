@@ -38,8 +38,11 @@ are flagged in the output: the signal is WHOIS, not RDAP.
 
 Usage:
   python3 check_domains.py lumafold amberpost --tlds com,ai,app
+  python3 check_domains.py quiet.tools amberpost.haus
+                                   (a full domain is checked on its own TLD
+                                    only; domain hacks go in as written)
   python3 check_domains.py "two words" --tlds com   (spaces are stripped)
-  python3 check_domains.py écrin cœur --tlds fr     (accents are transliterated,
+  python3 check_domains.py über straße --tlds com   (accents are transliterated,
                                                      and the rewrite is printed)
 
 Stdlib only. Be polite: the script sleeps between queries; don't hammer
@@ -101,8 +104,8 @@ TRANSLITERATE = {
 def normalize(name: str) -> str:
     """Lowercase and transliterate a candidate to a valid ASCII domain label.
 
-    Transliterates rather than deletes. Deleting would turn "écrin" into
-    "crin" and silently check the wrong domain.
+    Transliterates rather than deletes. Deleting would turn "über" into
+    "ber" and silently check the wrong domain.
     """
     name = name.strip().lower().replace(" ", "")
     name = "".join(TRANSLITERATE.get(c, c) for c in name)
@@ -356,11 +359,15 @@ def main() -> int:
     parser = argparse.ArgumentParser(
         description="RDAP availability check for name candidates."
     )
-    parser.add_argument("names", nargs="+", help="Name candidates (without TLD).")
+    parser.add_argument(
+        "names", nargs="+",
+        help="Name candidates, bare (lumafold) or as a full domain (quiet.tools).",
+    )
     parser.add_argument(
         "--tlds",
-        default=",".join(DEFAULT_TLDS),
-        help="Comma-separated TLD list (default: %(default)s).",
+        default=None,
+        help="Comma-separated TLD list for bare names (default: {}).".format(
+            ",".join(DEFAULT_TLDS)),
     )
     parser.add_argument(
         "--no-control",
@@ -376,24 +383,42 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    tlds = [t.strip().lstrip(".").lower() for t in args.tlds.split(",") if t.strip()]
-    # Two candidates can normalize to the same label ("Sun Ray" and "SunRay"),
+    requested = DEFAULT_TLDS if args.tlds is None else [
+        t.strip().lstrip(".").lower() for t in args.tlds.split(",") if t.strip()]
+    # A candidate is either a bare label, checked on every requested TLD, or a
+    # full domain ("quiet.tools"), checked on its own TLD only. A domain hack
+    # must never be flattened into "quiettools" and checked on .com: that is
+    # a different name, and a confident answer about the wrong domain.
+    # Two candidates can normalize to the same thing ("Sun Ray" and "SunRay"),
     # and some leave nothing at all ("北斗"). Both must be visible: a table
     # with a missing row reads as if everything was checked.
-    names, rewritten, dropped, spellings = [], [], [], {}
+    names, rewritten, dropped, spellings, multidot = [], [], [], {}, []
     for raw in args.names:
         raw = raw.strip()
-        name = normalize(raw)
+        own_tld = None
+        label_raw = raw
+        if "." in raw.strip("."):
+            label_raw, own_tld = raw.strip(".").rsplit(".", 1)
+            own_tld = normalize(own_tld)
+            if "." in label_raw or not own_tld:
+                multidot.append(raw)
+                continue
+        name = normalize(label_raw)
         if not name:
             dropped.append(raw)
             continue
-        if name != raw.lower().replace(" ", ""):
-            rewritten.append((raw, name))
-        if name in spellings:
-            spellings[name].append(raw)
+        if name != label_raw.lower().replace(" ", ""):
+            rewritten.append((raw, name if own_tld is None else "{}.{}".format(name, own_tld)))
+        key = (name, own_tld)
+        if key in spellings:
+            spellings[key].append(raw)
             continue
-        spellings[name] = [raw]
-        names.append(name)
+        spellings[key] = [raw]
+        names.append(key)
+    tlds = list(requested) if any(o is None for _, o in names) else []
+    for _, own_tld in names:
+        if own_tld is not None and own_tld not in tlds:
+            tlds.append(own_tld)
     if not names or not tlds:
         print("Nothing to check after normalization.", file=sys.stderr)
         return 1
@@ -410,8 +435,8 @@ def main() -> int:
         print("Without this registry, a 404 cannot be told apart from a TLD", file=sys.stderr)
         print("that has no RDAP service, so no verdict here would be safe.", file=sys.stderr)
         print("Check these by hand at a registrar instead:", file=sys.stderr)
-        for name in names:
-            for tld in tlds:
+        for name, own_tld in names:
+            for tld in ([own_tld] if own_tld else requested):
                 print("  {}.{}".format(name, tld), file=sys.stderr)
         return 1
 
@@ -421,16 +446,23 @@ def main() -> int:
         print("      The accented spelling is a separate IDN registration;")
         print("      check it at a registrar if the brand will use it.")
         print()
-    for name, raws in spellings.items():
+    for (name, own_tld), raws in spellings.items():
         if len(raws) > 1:
             print('note: {} all normalize to "{}" and are checked once.'.format(
-                ", ".join('"{}"'.format(r) for r in raws), name))
+                ", ".join('"{}"'.format(r) for r in raws),
+                name if own_tld is None else "{}.{}".format(name, own_tld)))
     if any(len(r) > 1 for r in spellings.values()):
         print()
     for raw in dropped:
         print('note: "{}" leaves no ASCII label, so it was NOT checked.'.format(raw))
     if dropped:
         print("      Look it up as an internationalized domain at a registrar.")
+        print()
+    for raw in multidot:
+        print('note: "{}" has more than one dot, so it was NOT checked.'.format(raw))
+    if multidot:
+        print("      Second-level domains like .co.uk are not supported here;")
+        print("      check it at a registrar.")
         print()
 
     # Resolve each TLD once, and prove the registry discriminates before
@@ -468,7 +500,7 @@ def main() -> int:
     if unserved:
         print("Not checkable: {}. No RDAP service, and WHOIS did not answer or".format(
             ", ".join("." + t for t in unserved)))
-        print("did not distinguish taken from free. Those columns are not a verdict —")
+        print("did not distinguish taken from free. Those columns are not a verdict:")
         print("nothing was checked there. Look them up at a registrar by hand.")
         print()
     if unreliable:
@@ -477,16 +509,25 @@ def main() -> int:
         print("reliably, so its results are reported UNKNOWN, never AVAILABLE?.")
         print()
 
-    col = max(len(n) for n in names) + 2
+    def shown(key):
+        name, own_tld = key
+        return name if own_tld is None else "{}.{}".format(name, own_tld)
+
+    col = max(len(shown(k)) for k in names) + 2
     header = "name".ljust(col) + "".join(("." + t).ljust(14) for t in tlds)
     print(header)
     print("-" * len(header))
 
     seen = set()
-    for name in names:
-        row = name.ljust(col)
+    for key in names:
+        name, own_tld = key
+        row = shown(key).ljust(col)
         for tld in tlds:
-            if tld in forced:
+            if own_tld is not None and tld != own_tld:
+                status = "-"
+            elif own_tld is None and tld not in requested:
+                status = "-"
+            elif tld in forced:
                 status = forced[tld]
             else:
                 kind, handle = plan[tld]
@@ -511,6 +552,8 @@ def main() -> int:
     if "UNKNOWN" in seen:
         print("UNKNOWN    = registry unreachable, rate-limited, or not answering")
         print("             RDAP. Check manually at a registrar.")
+    if "-" in seen:
+        print("-          = not asked: a full domain is checked on its own TLD only.")
     return 0
 
 

@@ -18,9 +18,9 @@ Kill on sight unless a written justification survives review (see "When an exhau
 
 **Connection & trust**: Nexus, Synergy, Catalyst, Vault, Anchor, Bridge, Relay, Atlas, Sentinel, Aegis, Veritas, Kairos
 
-**AI-era declension**: Neural-, Cogn-, Synth-, Infer-, and the -ix / -ex / -tex endings that produce Neuralift, Cognitex, Inferix, Synthetix. The 2024-2026 generator graveyard; every name-generator tool reaches for them first.
+**AI-era variants**: Neural-, Cogn-, Synth-, Infer-, and the -ix / -ex / -tex endings that produce Neuralift, Cognitex, Inferix, Synthetix. The 2024-2026 generator graveyard; every name-generator tool reaches for them first.
 
-**Greek/Latin startup declension**: anything ending in -us, -um, -ia, -os chosen *because it sounds Latin*, not because the root means something (produces pharma or crypto vibes: Novum, Alteus, Veridia, Kryptos…)
+**Greek/Latin startup endings**: anything ending in -us, -um, -ia, -os chosen *because it sounds Latin*, not because the root means something (produces pharma or crypto vibes: Novum, Alteus, Veridia, Kryptos…)
 
 This list is illustrative, not exhaustive. The test generalizes: *if the word feels instantly "startup-appropriate", that feeling is the evidence that ten thousand founders had it before you.*
 
@@ -30,9 +30,9 @@ This list is illustrative, not exhaustive. The test generalizes: *if the word fe
 - **Dropped vowels** (Flickr, Tumblr era): a permanent spelling tax for a dated signal.
 - **"AI" bolted on**: SomethingAI names the technology, not the brand, and dates itself the way "Cyber-" and "e-" did. There is no fundraising premium to buy back the cost: in a matched sample of 200 YC AI companies (Technical.ly, August 2026), the half without "AI" in the name raised at least as much as the half with it. The test that survives: will the word still describe the company in ten years? Lead with the problem solved, not the technology behind it. **The `.ai` TLD is a different decision**: a namespace and an audience signal, chosen at domain time, not a defect in the word. An empty name on `.ai` is usually more defensible than a name that explains the AI; a `.ai` domain never licenses "AI" inside the name.
 - **Descriptive of the technology, not of the brand**: n8n, tRPC, LangChain, Character.AI. Loved tools, filename names: the first two are unpronounceable by design, the third names a 2022 architecture, the fourth uses the TLD as a crutch. Fine for a library that will only ever be typed; fatal for anything that must be said.
-- **Mushy portmanteaus**: blends where the seam still shows — `Innova|tech`, `Market|ly`, `Financ|io`. A blend earns its place only when it reads as one natural word (Pinterest, Netflix). If you can see the weld, cut it.
+- **Mushy portmanteaus**: blends where the seam still shows: `Innova|tech`, `Market|ly`, `Financ|io`. A blend earns its place only when it reads as one natural word (Pinterest, Netflix). If you can see the weld, cut it.
 - **Random CVCV tech-strings**: the `Zy-lo`, `Ve-xo`, `Qo-rix` shape. Pronounceable, ownable, and completely hollow: coined names work when built from meaningful morphemes or deliberate sound symbolism, not from a syllable shaker.
-- **Internal capitals**: a name that needs its capitals to be read (DeFiLlama, eBay-style camel case, anything with a category acronym welded in) gets respelled by everyone who types it, and the logo has to teach the case for the rest of the brand's life. Same family: **the category word in the name** (DeFi-, -Finance, -Coaching, -Labs) fixes the activity and dates with it; "AI bolted on" above is one instance of a general defect.
+- **Internal capitals**: a name that needs its capitals to be read (DeFiLlama, eBay-style camel case, anything with a category acronym welded in) gets respelled by everyone who types it, and the logo has to teach the case for the rest of the brand's life. Same family: **the category word in the name** (DeFi-, -Finance, -Coaching, -Labs) ties the name to one activity and ages with it; "AI bolted on" above is one instance of a general defect.
 - **Misspelling without a reason**: Lyft earns its Y (distinct from the verb, trademark-able). Kwik does not.
 - **Domain leakage**: letting "get", "use", "try", "hq", "app" migrate from the domain into the name itself.
 - **Two random nouns**: arbitrary pairings can be excellent (that's how arbitrary marks work), but only when the pairing is *chosen* for texture, sound, and image. "Blue Otter Labs" assembled by dice roll has the shape of a name and none of the intent.

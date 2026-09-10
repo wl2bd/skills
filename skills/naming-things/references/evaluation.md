@@ -37,7 +37,7 @@ Weight dimensions by the brief: a CLI tool weights sayability and search uniquen
 ## Supplementary tests
 
 - **The résumé test** (companies and products only): "I work at ___." Does the sentence carry pride, or need a smile of apology?
-- **The flexion test** (companies and products only): can it verb, plural, and possessive cleanly? ("We ___ed the files.") Not required, but names that flex become language.
+- **The verb test** (companies and products only): can it verb, plural, and possessive cleanly? ("We ___ed the files.") Not required, but names that flex become language.
 - **The identity test**: can you already see the wordmark and hear the tagline rhythm? Names with a visual handle (metaphor, texture) give the design phase a head start.
 - **The neighbor test**: say it in a sentence next to the product category and the sibling product names. Family fit matters when the brief includes a portfolio. In series mode, the siblings are the two fictional "+2" members built on the same grammar (`generation.md` §9): a name that is great alone and awkward with siblings is a failed series candidate.
 - **The corpus test**: find the closest real name of the same type in `corpus.md` and ask whether the candidate pays the same tax with the same budget. A tiny tool cannot afford Apple's tax; a company cannot afford a domain hack's.
@@ -47,7 +47,7 @@ Weight dimensions by the brief: a CLI tool weights sayability and search uniquen
 The name precedes the logo and survives it: it circulates by word of mouth without the designer, while the logo only travels where the company puts it. Typography, colour and symbol house the name; they do not replace it. So before any drawing, ask three questions of each shortlist name, and write the answers into "Watch out" when they bite:
 
 - Does the word hold as a wordmark: length, rhythm of the letterforms, awkward capitals, a double letter that will look like a typo at small sizes? Is every word of it settled: an article or a qualifier added after the fact ("The", "Labs", "Studio") moves the balance of a logotype and sends the identity back to the drawing board.
-- Does it open a formal territory of its own, or will it force a symbol to compensate for a soft word?
+- Does it open a visual territory of its own, or will it force a symbol to compensate for a soft word?
 - Do the sound register and the probable visual register contradict each other (a percussive name that the brief's tone will have set in a light, rounded face)?
 
 Two handoff failures to name when you see them coming: a strong name paired with a logo too expressive to let it speak, and a typeface that contradicts the tone the word implies. A name strong enough to carry a system, not only a logotype, is the goal. This pass produces no logo; it only tells the identity designer where the name leaves room.

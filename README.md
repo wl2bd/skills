@@ -14,7 +14,7 @@ ones I use in my own work, cleaned up enough to hand over.
 
 ## Install
 
-**As a plugin** — one command, and you get everything I add later:
+**As a plugin**: one command, and you get everything I add later:
 
 ```
 /plugin marketplace add wl2bd/skills
@@ -23,7 +23,7 @@ ones I use in my own work, cleaned up enough to hand over.
 
 Skills then answer to `wl2bd:naming-things` and `wl2bd:discreet-design`.
 
-**As a plain skill** — copy the folder you want:
+**As a plain skill**: copy the folder you want:
 
 ```bash
 git clone https://github.com/wl2bd/skills.git
@@ -41,8 +41,8 @@ standard library only, in naming-things.
 
 `naming-things` triggers on its own when you ask for a name:
 
-> Je lance une lib open source pour parser des fichiers ICS. Il me faut un nom
-> de crate avant de publier.
+> I'm launching an open-source library that parses ICS files. I need a crate
+> name before I publish.
 
 > We're stuck between Cleary, Clario and Klaro for our accounting app.
 
@@ -50,4 +50,4 @@ standard library only, in naming-things.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Use them, fork them, adapt them.
+MIT. See [LICENSE](LICENSE). Use them, fork them, adapt them.

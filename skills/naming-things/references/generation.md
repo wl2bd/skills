@@ -59,17 +59,17 @@ Truncations (Cisco), reduplications, respellings, letter swaps, applied to *good
 Only when the said-versus-typed rule in `name-types.md` §14 allows it. Start from the phrase, not the word:
 
 - Write 10 to 20 two-word phrases that describe the product or the feeling of using it, then look for a TLD that can play the second word. Working stock, September 2026: .tools, .app, .dev, .page, .site, .menu, .help, .today, .work, .name, .studio, .design, .haus, .club, .golf, .cv, .me, .ng, .ly, .sh, .io, .ai, .so, .to, .is, .it. Check the live list at IANA before proposing a TLD; new gTLDs open and close.
-- Two shapes: the TLD completes a phrase (`early.tools`, `pre.page`, `tido.today`) or the TLD finishes a word (`vibi.ng`, `linkedinto.cv`, `bit.ly`). The first is more sayable; the second is more memorable and more fragile.
+- Two shapes: the TLD completes a phrase (`remix.run`, `bolt.new`, `pre.page`) or the TLD finishes a word (`bit.ly`, `linkedinto.cv`). The first is more sayable; the second is more memorable and more fragile.
 - The dot must fall where a natural pause falls. If reading it aloud requires saying "dot" in the middle of a word, it fails the radio test (`are.na` and `lu.ma` accepted that tax knowingly; say so if you propose one).
 - Hyphenated .com as a cousin: `any-feeds.com`, `feed-letter.com`. Readable, available, but the hyphen leaks into the spoken name and is a known spelling tax. Offer it only when the unhyphenated .com is taken and the name is strong enough to pay it.
-- Every domain hack proposed for a tool ships with its fallback on the same line, in case the project outgrows it: `early.tools` (fallback: Early, early.com REGISTERED). The user sees at once what changing scale would cost.
+- Every domain hack proposed for a tool ships with its fallback on the same line, in case the project outgrows it: `quiet.tools` (fallback: Quiet, quiet.com REGISTERED). The user sees at once what changing scale would cost.
 
 ## 9. Series grammars (naming a family, not a name)
 
 Use when the brief says the name is the first of a series (tools, packages, skills, features). The object of the process is then a naming system, and the shortlist has to show the system. Three grammars; name the one you are using, never let it emerge by accident:
 
-1. **Constant left, variable right.** `early.tools`, `early.domains`. The word is the brand, the TLD names the category. Most legible: the family reads as a family on first sight. Most fragile: every future tool needs a TLD that exists and reads well, and the brand word must stretch to categories not yet imagined.
-2. **Variable left, constant right.** `tasteful.haus`, `belong.haus`; `read.cv`, `posts.cv`; `something-forge`, `other-forge`. The suffix is the brand, each tool gets its own word. Most flexible: any future tool fits as long as a word can be found. Cost: the suffix carries the brand alone, so it must be distinctive on its own (`-haus` is; `-app` is not).
+1. **Constant left, variable right.** `quiet.tools`, `quiet.studio`. The word is the brand, the TLD names the category. Most legible: the family reads as a family on first sight. Most fragile: every future tool needs a TLD that exists and reads well, and the brand word must stretch to categories not yet imagined.
+2. **Variable left, constant right.** `fold.haus`, `sketch.haus`; `read.cv`, `posts.cv`; `something-forge`, `other-forge`. The suffix is the brand, each tool gets its own word. Most flexible: any future tool fits as long as a word can be found. Cost: the suffix carries the brand alone, so it must be distinctive on its own (`-haus` is; `-app` is not).
 3. **Recombined pivot word.** `any-feeds`, `feed-letter`. One word reappears in a different position. Weakest: reads as a series only to someone who already knows both members. Use it only when the pivot word is the product's whole identity.
 
 Rules for the axis:

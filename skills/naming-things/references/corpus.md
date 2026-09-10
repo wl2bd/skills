@@ -347,14 +347,14 @@ Read with sections 14 and 19. Grouped by the four mechanisms that recur in this 
 ### 20f. The anti-top, kept as evidence
 
 - **Anything-AI** (OnDeck AI, dScribe AI, Certus AI): self-dating; see `anti-patterns.md`.
-- **Neuralift, Cognitex, Inferix, Synthetix**: the 2024-2026 generator graveyard, listed under "AI-era declension" in the exhausted lexicon.
+- **Neuralift, Cognitex, Inferix, Synthetix**: the 2024-2026 generator graveyard, listed under "AI-era variants" in the exhausted lexicon.
 - **n8n, tRPC, Dify, LangChain**: loved tools, filename names; descriptive of the technology, not of the brand.
 - **Character.AI**: the .AI as crutch.
 - **ChatGPT**: industrial descriptive; won by force, not by name. The strongest single argument that a name is a filter, not a cause.
 
 ### Four lessons for tools
 
-1. Short beats clever: two or three syllables, sayable in French and English without spelling. Linear, Clay, Dust, Neon.
+1. Short beats clever: two or three syllables, sayable in English and in the target market's language without spelling. Linear, Clay, Dust, Neon.
 2. A displaced real word beats a portmanteau. Cursor explains nothing and everyone understands after a week; "Codepilot Pro AI" explains everything and does not exist.
 3. A first name is a strategy, not a cute idea: it humanises a system people are afraid to treat as a person. Fragile when the product is a dashboard.
 4. Granola beats "Deepvault": a name slightly beside the point, held by confident design, beats a name that means AI. The market is saturated with meaning and short of character.

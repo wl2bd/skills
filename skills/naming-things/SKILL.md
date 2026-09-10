@@ -1,6 +1,6 @@
 ---
 name: naming-things
-description: Use when the user wants to find, create, evaluate, rename, or check a name for a project, product, company, feature, app, library, package, or brand — including casual asks like "help me name this", "name ideas for X", "is X a good name?", and availability questions about domains or trademarks. Also use when naming is only one part of a bigger task: launching a product, starting a company, or publishing a tool or an open-source package.
+description: Use when the user wants to find, create, evaluate, rename, or check a name for a project, product, company, feature, app, library, package, or brand, including casual asks like "help me name this", "name ideas for X", "is X a good name?", and availability questions about domains or trademarks. Also use when naming is only one part of a bigger task: launching a product, starting a company, or publishing a tool or an open-source package.
 ---
 
 # Naming things
@@ -44,9 +44,9 @@ Why: without territories, generation collapses onto the first obvious metaphor a
 
 ## 3. Generate wide
 
-Read `references/anti-patterns.md` **before** generating: it is the single highest-leverage read in this skill, because it lists the defaults you will otherwise reach for. Then read `references/name-types.md` and `references/generation.md` for the type taxonomy and construction techniques. When a territory produces only one kind of name, open the matching section of `references/corpus.md` and read five real entries: the range within a type is the point.
+Read `references/anti-patterns.md` **before** generating: it is the single highest-leverage read in this skill, because it lists the defaults you will otherwise reach for. Then read `references/name-types.md` and `references/generation.md` for the type taxonomy and the ways to build names. When a territory produces only one kind of name, open the matching section of `references/corpus.md` and read five real entries: the range within a type is the point.
 
-Rules of generation:
+Generation rules:
 
 - Produce **60-100+ raw candidates** for a full process (30+ in quick mode). This is working material; never show the raw list.
 - Spread across name types deliberately, using these proportions as guardrails against mode collapse, not as law: real words (suggestive, metaphor, arbitrary) ~40%, compounds ~15%, coined/morpheme-built ~20%, borrowed/foreign ~10%, experiential and other ~15%. Domain-native names (the TLD as last syllable) are a territory of their own for anything typed more than said, and at most one candidate for anything said more than typed.
@@ -74,18 +74,18 @@ Say it: pronunciation if not obvious
 Watch out: the honest risk (crowded metaphor, spelling tax, class 9 conflict likely…)
 ```
 
-Rules of presentation:
+Presentation rules:
 
 - Give every name the same amount of text, the same level of detail and the same tone. A longer rationale reads as a recommendation, a shorter one as a filler; the presentation must not vote before the user does.
-- A domain hack proposed for a tool ships with its fallback on the same line, in case the project outgrows it: `early.tools` (fallback: Early, early.com REGISTERED).
+- A domain hack proposed for a tool ships with its fallback on the same line, in case the project outgrows it: `quiet.tools` (fallback: Quiet, quiet.com REGISTERED).
 - In series mode, every name ships with its "+2": two fictional siblings built on the same grammar, one line each. The user judges the family, not the orphan.
-- Run the visual room pass from `references/evaluation.md` on the shortlist: does the word hold as a wordmark, does it open a formal territory, do its sound and its probable look contradict each other. No logo is produced; the answers go into "Watch out" when they bite.
+- Run the visual room pass from `references/evaluation.md` on the shortlist: does the word hold as a wordmark, does it open a visual territory of its own, do its sound and its probable look contradict each other. No logo is produced; the answers go into "Watch out" when they bite.
 
 ## 6. Verify
 
 Read `references/verification.md` for the full workflow. In short:
 
-- **Domains**: run `scripts/check_domains.py` (Python 3, stdlib only; queries each TLD's authoritative registry over RDAP, or WHOIS for the ~180 TLDs that publish no RDAP) on the shortlist, passing `--tlds` derived from the brief's markets and constraints: `.com` plus the 2026 tech stack (`.ai`, `.io`, `.app`, `.dev`, category TLDs) by default, country TLDs only when the brief names the country. For a compound name, test the second word as a TLD before testing it as a label. Availability filters options; it must never pick the name. A `NO RDAP` result means the TLD could not be checked, not that the domain is free. Report an order of magnitude of cost for premium TLDs and registered names, checked by hand, never from memory. In series mode, also check 2-3 invented future members for the families that survive scoring: a system whose second name is taken is a dead system. When the brief says no domain is needed (an open-source artefact, a feature, a skill), check `.com` plus one category TLD for the series test only, say the domain is not a decision here, and skip trademark screening with the reason stated.
+- **Domains**: run `scripts/check_domains.py` (Python 3, stdlib only; queries each TLD's authoritative registry over RDAP, or WHOIS for the ~180 TLDs that publish no RDAP) on the shortlist, passing `--tlds` derived from the brief's markets and constraints: `.com` plus the 2026 tech stack (`.ai`, `.io`, `.app`, `.dev`, category TLDs) by default, country TLDs only when the brief names the country. For a compound name, test the second word as a TLD before testing it as a label, passing the domain hack as written (`quiet.tools`). Availability filters options; it must never pick the name. A `NO RDAP` result means the TLD could not be checked, not that the domain is free. Report an order of magnitude of cost for premium TLDs and registered names, checked by hand, never from memory. In series mode, also check 2-3 invented future members for the families that survive scoring: a system whose second name is taken is a dead system. When the brief says no domain is needed (an open-source artefact, a feature, a skill), check `.com` plus one category TLD for the series test only, say the domain is not a decision here, and skip trademark screening with the reason stated.
 - **Trademarks**: screening, not clearance. Exact + sound-alike search on the relevant registries (EUIPO/TMview, INPI, USPTO, WIPO), in the Nice classes the user will actually operate in. Every trademark result you report must carry the label *indicative, not a legal clearance*.
 - **Handles and registries**: social handles checked manually; for developer tools, check npm/PyPI/crates for package-name collisions.
 
@@ -93,7 +93,7 @@ Present results as an availability snapshot table alongside the shortlist.
 
 ## 7. Recommend
 
-Commit to 2-3 recommendations and argue them against the brief, not against your taste. State the trade-off each one makes: for a series, say once that a grammar locks the user in (the day a tool does not fit, it is bent or pushed out); for any name, say whether it could be dropped later without losing the product, since the first name is rarely the last (`references/corpus.md` §15). Recommend that nothing be registered in this session: the shortlist should be reread the next day, ideally shown to one person from the target market. What survives the night is the signal. Close with the standing caveat: for any name that will carry a company or a paid product, final trademark clearance belongs to a trademark attorney (conseil en PI in France); this process gets the user to a defensible shortlist, not to legal safety.
+Commit to 2-3 recommendations and argue them against the brief, not against your taste. State the trade-off each one makes: for a series, say once that a grammar locks the user in (the day a tool does not fit, it is bent or pushed out); for any name, say whether it could be dropped later without losing the product, since the first name is rarely the last (`references/corpus.md` §15). Recommend that nothing be registered in this session: the shortlist should be reread the next day, ideally shown to one person from the target market. What survives the night is the signal. Close with the standing caveat: for any name that will carry a company or a paid product, final trademark clearance belongs to a trademark attorney; this process gets the user to a defensible shortlist, not to legal safety.
 
 ## Reference map
 
